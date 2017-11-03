@@ -1,0 +1,13 @@
+(compile -s -O3 -d1 mu-chicken-support.scm -j mu-chicken-support)
+(compile -s mu-chicken-support.import.scm -O3 -d0)
+
+(install-extension
+
+ ;; Name of your extension:
+ 'mu-chicken-support
+
+ ;; Files to install for your extension:
+ '("mu-chicken-support.so" "mu-chicken-support.import.so")
+
+ ;; Assoc list with properties for your extension:
+ '((version "0.1")))
